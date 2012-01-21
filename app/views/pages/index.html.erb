@@ -1,0 +1,7 @@
+<h1>claimwars</h1>
+<%= form_tag("/search", :method => "get") do %>
+	<%= text_field_tag(:q, "", :onkeyup => "searchSpotify(this.value);") %>
+	<%= submit_tag("Search") %>
+<% end %>
+
+<div id="results"></div>
