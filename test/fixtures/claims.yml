@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uid: MyString
+  sid: MyString
+  listened_at: 2012-01-21 14:56:07
+
+two:
+  uid: MyString
+  sid: MyString
+  listened_at: 2012-01-21 14:56:07

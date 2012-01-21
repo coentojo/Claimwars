@@ -1,1 +1,3 @@
 #results { width: 500px; height: 500px; border: 1px solid; }
+ul.ui-autocomplete {border: 1px solid;}
+li.ui-corner-all:hover {background: #d4d4d4}

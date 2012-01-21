@@ -1,6 +1,9 @@
 Claimwars::Application.routes.draw do
   
   resources :pages
+  match "/auth/:facebook/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
+  root :to => "pages#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
