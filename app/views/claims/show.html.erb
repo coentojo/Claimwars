@@ -1,0 +1,16 @@
+<div id="notice"><%= flash[:notice] %></div>
+Claimed at: <%= @c.listened_at.strftime("%m/%d/%Y %I:%M%p")  %>
+Song info:
+Title: <%= @s.title %>
+Artist: <%= @s.artist %>
+Album: <%= @s.album %>
+Released: <%= @s.released %>
+
+Here's your rank against the world:<br/>
+<% count = 1 %>
+<% @total_users.each do |u|%>
+	Rank: <%= count %><br/>
+	<%= u.name %>
+	<% count += 1 %>
+<% end %>
+

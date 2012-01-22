@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120121221840) do
+ActiveRecord::Schema.define(:version => 20120121225606) do
+
+  create_table "claims", :force => true do |t|
+    t.string   "uid"
+    t.string   "sid"
+    t.datetime "listened_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "songs", :force => true do |t|
+    t.string   "sid"
+    t.string   "artist"
+    t.string   "title"
+    t.string   "album"
+    t.string   "released"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "provider"

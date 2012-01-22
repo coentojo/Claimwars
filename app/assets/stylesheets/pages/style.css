@@ -1,3 +1,10 @@
-#results { width: 500px; height: 500px; border: 1px solid; }
+body {margin:0; padding:0}
 ul.ui-autocomplete {border: 1px solid;}
 li.ui-corner-all:hover {background: #d4d4d4}
+html {
+	background: url("cat_fight.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

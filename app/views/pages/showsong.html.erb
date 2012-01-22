@@ -1,0 +1,14 @@
+Album Release Date:<%= @released %><br/>
+Album Name:<%= @album %><br/>
+Track title: <%= @track %><br/>
+Artist: <%= @artist %><br/>
+
+<%= form_tag (new_claim_path) do %>
+	<%= hidden_field_tag :released, @released %>
+	<%= hidden_field_tag :album, @album %>
+	<%= hidden_field_tag :track, @track %>
+	<%= hidden_field_tag :artist, @artist %>
+	<%= hidden_field_tag :sid, @sid %>
+	<%= submit_tag "CLAIM" %>
+	
+<% end %>

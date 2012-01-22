@@ -1,16 +1,20 @@
-<div id="login">
-	<% if current_user %>
-		<%= link_to "Sign out", signout_path %>
-		Welcome, <%= current_user.name %>
-	<% else %>
-		<%= link_to(image_tag("fb_login.png"), "/auth/facebook", :id => "login") %>
+<div id="background">
+	<div id="notice"><%= flash[:notice] %></div>
+	<div id="login">
+		<% if current_user %>
+			<%= link_to "Sign out", signout_path %>
+			Welcome, <%= current_user.name %>
+		<% else %>
+			<%= link_to(image_tag("fb_login.png"), "/auth/facebook", :id => "login") %>
+		<% end %>
+
+	</div>
+	<h1>claimwars</h1>
+	<!-- let's change this to a post -->
+	<%= form_tag(new_claim_path, :method => "get") do %>
+		<%= text_field_tag(:q, "", :onkeyup => "searchSpotify(this.value);") %>
+		<%= submit_tag("Search") %>
 	<% end %>
 
+	<div id="results"></div>
 </div>
-<h1>claimwars</h1>
-<%= form_tag("/search", :method => "get") do %>
-	<%= text_field_tag(:q, "", :onkeyup => "searchSpotify(this.value);") %>
-	<%= submit_tag("Search") %>
-<% end %>
-
-<div id="results"></div>
